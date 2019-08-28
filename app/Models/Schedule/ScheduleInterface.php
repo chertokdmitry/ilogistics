@@ -1,11 +1,13 @@
 <?php
 
-
 namespace App\Models\Schedule;
-
 
 use Illuminate\Http\Request;
 
+/**
+ * Interface ScheduleInterface
+ * @package App\Models\Schedule
+ */
 
 interface ScheduleInterface
 {
@@ -13,5 +15,5 @@ interface ScheduleInterface
 
     public function region();
 
-    public static function newRoute(Request $request);
+    public function newRoute(Request $request);
 }

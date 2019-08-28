@@ -5,6 +5,10 @@
         <div>
             <h3>Результат</h3>
         </div>
-                            {{ $html }}
+        @if ($result)
+            Данные записаны
+            @else
+            Транспорт занят
+            @endif
     </div>
 @endsection

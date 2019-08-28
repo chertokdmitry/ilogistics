@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Http\Controllers;
-
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -10,7 +8,6 @@ use App\Models\Schedule\BusSchedule;
 use App\Models\Region;
 use App\Models\Transport\Bus;
 use Illuminate\Support\Facades\Cache;
-
 
 class BusScheduleController extends Controller
 {
@@ -43,9 +40,13 @@ class BusScheduleController extends Controller
 
     public function store(Request $request)
     {
-        $html = BusSchedule::newRoute($request);
-        $view = view('result', ['html' => $html])->render();
+        if (!empty($request)) {
+            $schedule = new BusSchedule();
+            $result = $schedule->newRoute($request);
 
-        return (new Response($view));
+            $view = view('result', ['result' => $result])->render();
+
+            return (new Response($view));
+        }
     }
 }

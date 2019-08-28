@@ -1,27 +1,41 @@
 <?php
 
-
 namespace App\Models\Schedule;
-
 
 use Illuminate\Http\Request;
 
+/**
+ * Class TruckSchedule
+ * @package App\Models\Schedule
+ */
 
 class TruckSchedule extends Schedule implements ScheduleInterface
 {
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+
     public function transport()
     {
         return $this->hasOne('App\Models\Transport\Truck', 'id', 'transport_id');
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
 
     public function region()
     {
         return $this->hasOne('App\Models\Region', 'id', 'region_id');
     }
 
-    public static function newRoute(Request $request)
+    /**
+     * @param Request $request
+     * @return bool
+     */
+
+    public function newRoute(Request $request)
     {
-        $post = $request->all();
-        return self::store($post, self::class);
+        return self::store($request, self::class);
     }
 }
