@@ -6,7 +6,14 @@ use Illuminate\Http\Request;
 
 /**
  * Class TruckSchedule
+ *
  * @package App\Models\Schedule
+ * @property-read \App\Models\Region $region
+ * @property-read \App\Models\Transport\Truck $transport
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\TruckSchedule newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\TruckSchedule newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\TruckSchedule query()
+ * @mixin \Eloquent
  */
 
 class TruckSchedule extends Schedule implements ScheduleInterface

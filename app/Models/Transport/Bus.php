@@ -7,6 +7,14 @@ namespace App\Models\Transport;
 use App\Models\Validator\ValidatorInterface;
 
 
+/**
+ * App\Models\Transport\Bus
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Transport\Bus newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Transport\Bus newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Transport\Bus query()
+ * @mixin \Eloquent
+ */
 class Bus extends Transport implements TransportInterface
 {
 

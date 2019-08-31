@@ -11,7 +11,12 @@ use App\Models\Transport\Bus;
 
 /**
  * Class Schedule
+ *
  * @package App\Models\Schedule
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\Schedule newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\Schedule newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Schedule\Schedule query()
+ * @mixin \Eloquent
  */
 
 class Schedule extends Model
