@@ -1,4 +1,4 @@
-@extends('layouts.app')
+web.php@extends('layouts.app')
 
 @section('content')
 <div class="container">
