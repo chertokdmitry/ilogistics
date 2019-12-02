@@ -3,10 +3,9 @@
 
 namespace App\Services;
 
-use App\Services\ValidationService;
 use Illuminate\Http\Request;
 use App\Services\Repositories\TrucksRepository;
-
+use App\Services\ValidationService;
 
 class TrucksService
 {

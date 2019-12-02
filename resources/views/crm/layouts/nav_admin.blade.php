@@ -18,9 +18,9 @@
                 </h6>
                 <ul class="nav flex-column mb-2">
                     @foreach ($leftNav['transports'] as $name => $route)
-                        <li class="nav-item">
-                            {{ link_to(route($route), $name, ['class' => 'nav-link']) }}
-                        </li>
+                    <li class="nav-item">
+                        {{ link_to(route($route), $name, ['class' => 'nav-link']) }}
+                    </li>
                     @endforeach
                 </ul>
 
